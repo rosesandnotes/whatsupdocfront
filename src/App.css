@@ -1,0 +1,495 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* whatsup doc styling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+h3{
+  font-size: 2em;
+  color: #41A6C2;
+  text-align: center;
+}
+
+.container h1:hover{
+  text-decoration: none;
+}
+ 
+.homeOptions img {
+  transition: 0.5s;
+} 
+
+.homeOptions img:hover {
+  transform: scale(1.1); 
+}
+
+#showcase {
+  background-image: url("img/bgweb.jpg");
+  height: 100vh; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding: 0 20px;
+  font-family: Arial, Helvetica, sans-serif; 
+
+  position: relative;
+}
+
+#showcase, #aboutsection, #contactsection {
+  position: relative;
+  padding: 0 20px;
+  font-family: Arial, Helvetica, sans-serif; 
+  height: 100vh;
+}
+
+#showcase h1{
+  font-size: 6em;
+  font-family: 'Roboto black', sans-serif;
+  color: #41A6C2;
+  line-height: 1.2;
+  margin-top: 50px;
+  text-shadow: 0 1px 2px rgba(34, 95, 105, 0.6);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#showcase h2{
+  color: black;
+  margin-bottom: 40px;
+}
+
+#homeMenu img{
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.navbar {
+  background-color: #41A6C2;
+}
+
+.navlink {
+  color: #fff;
+}
+
+#aboutsection {
+  background-color: #41A6C2;
+  color: #fff;
+}
+
+
+#contactForm {
+  /* position: absolute;
+  top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%); */
+ width: 50%;
+}
+
+#footersection {
+  background-color: #41A6C2;
+  color: #fff;
+  padding: 1em;
+}
+
+
+@media (max-width: 996px) {
+  #homeMenu img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 419px){
+  #logotext {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px){
+  #headertext, #subheadertext {
+    display: none;
+  }
+}
+
+img #logoimage{
+  margin-left: 40px;
+}
+
+.signup-button{
+  border-radius: 3px;
+  border: none;
+  padding-top: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 10px;
+  background-color: white;
+  color: #41A6C2;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.signup-button:hover {
+  background: black;
+  text-decoration: none;
+  color: white;
+}
+
+/*Sign in pop up*/
+.bgoverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.bgoverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sign-popup {
+  margin: 70px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  width: 25%;
+  position: relative;
+}
+
+.sign-popup .xclose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #41A6C2;
+}
+.sign-popup .xclose:hover {
+  color: black;
+}
+.sign-popup .signupfield {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .sign-popup{
+    width: 70%;
+  }
+}
+
+/* sign in field */
+.signin-form {
+  text-align: center;
+  max-width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+.signin-form input[type=text], .signin-form input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.signin-form input[type=text]:focus, .signin-form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.signinbtn {
+  background-color: #41A6C2;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  font-size: 1.2em;
+}
+
+.signinbtn:hover {
+  opacity: 1;
+}
+
+.signupbtn {
+  background-color: #41A6C2;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  font-size: 1.2em;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.signupbtn:hover {
+  opacity: 1;
+}
+
+.signupbtn1 {
+  background-color: #41A6C2;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  font-size: 1.2em;
+  margin-top: 10px;
+  display: grid;
+  text-align: center;
+  height: 100%;
+}
+
+.signupbtn1:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.forgotpass {
+  color: #41A6C2;
+  text-decoration: none;
+}
+
+.forgotpass:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.notmember {
+  color: black;
+  text-decoration: none;
+}
+
+.notmember:hover {
+  color: #41A6C2;
+  text-decoration: none;
+}
+
+/* sign up field */
+.signup-form {
+  text-align: center;
+  max-width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+.signup-form h1 {
+  font-family: 'Roboto medium', sans-serif;
+}
+
+.signup-form input[type=text], .signup-form input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.signup-form input[type=text]:focus, .signup-form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* chat box */
+.open-button {
+  padding: 30px 30px;
+  cursor: pointer;
+  opacity: 0, 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.chat-popup .chatform .close-button{
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #41A6C2;
+}
+
+.pandaformbox {
+  padding: 30px 30px;
+  cursor: pointer;
+  opacity: 0, 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* chat pop up */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 105px;
+  border-radius: 5px;
+  z-index: 9;
+}
+
+/* styles to the form */
+.chatform {
+  width: 350px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+}
+
+/*.chatform textarea {
+  width: 85%;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  display: inline;
+  position: fixed;
+}*/
+
+.chatform input:focus {
+  outline: none;
+}
+
+.chatform input {
+  width: 270px;
+  border: none;
+  display: inline;
+}
+
+.chatform textarea{
+  width: 100%;
+  border: none;
+  resize: none;
+  padding: 100px;
+}
+
+.chat-popup .chatform .send-button {
+ text-align: right;
+ border: none;
+ outline: none;
+ background-color: Transparent;
+ width: 50px;
+ margin-bottom: 10px;
+}
+
+/* Add some hover effects to buttons */
+.chatform .send-button:hover, .open-button:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 680px) {
+ .chatbox {
+    display: none;  
+  }
+}
+
+.terms-popup {
+  margin: 70px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  overflow: scroll;
+  height: 70%;
+}
+
+.terms-popup .xclose {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #41A6C2;
+}
+.terms-popup .xclose:hover {
+  color: black;
+}
+
+.Termsnprivacy{
+  max-height: 30%;
+  font-size: .8em;
+}
+
+.Termsnprivacy h4{
+  font-size: 1.5em;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #d4d4d4;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #d4d4d4;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #d4d4d4;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #d4d4d4;
+}  
+
+/* end */
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
